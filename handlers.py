@@ -133,7 +133,7 @@ async def download_selected_track(callback: CallbackQuery):
             title=info["title"],
             performer=info["uploader"],
             duration=info["duration"],
-            caption="(^-^)\/ Скачано успешно",
+            caption="(^-^)/ Скачано успешно",
         )
 
         await status_msg.delete()
@@ -153,7 +153,7 @@ async def download_selected_track(callback: CallbackQuery):
 async def handle_music_link(message: Message):
     url = message.text.strip()
     if "soundcloud.com" not in url.lower():
-        await message.reply("(^-^)\/ Поддерживаются только ссылки SoundCloud.", 
+        await message.reply("(^-^)/ Поддерживаются только ссылки SoundCloud.", 
                           reply_markup=back_to_menu_button())
         return
 
@@ -174,7 +174,7 @@ async def handle_music_link(message: Message):
             title=info["title"],
             performer=info["uploader"],
             duration=info["duration"],
-            caption="(^-^)\/ Скачано успешно",
+            caption="(^-^)/ Скачано успешно",
         )
 
         await status_msg.delete()

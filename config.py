@@ -10,6 +10,6 @@ MAX_FILE_SIZE = int(os.getenv("MAX_FILE_SIZE", 50_000_000))
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
 
 if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN не найден! Добавь его в Environment Variables на Render.")
+    raise ValueError("BOT_TOKEN не найден! Проверь Environment Variables на Render.")
 
 print("(｡◕‿◕｡) Конфигурация успешно загружена")
