@@ -10,7 +10,7 @@ from handlers import router
 
 async def main():
     if not BOT_TOKEN:
-        print("( 0 _ 0 ) Ошибка: BOT_TOKEN не найден в .env файле!")
+        print("(╥﹏╥) Ошибка: BOT_TOKEN не найден в .env файле!")
         return
 
     bot = Bot(

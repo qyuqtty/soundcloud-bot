@@ -83,12 +83,9 @@ async def handle_text_search(message: Message):
         kb = []
         for i, track in enumerate(results):
             button_text = f"{track['title'][:45]}"
-            if track['uploader']:
+            if track.get('uploader'):
                 button_text += f" — {track['uploader'][:20]}"
-            kb.append([InlineKeyboardButton(
-                text=button_text,
-                callback_data=f"download_track:{i}"
-            )])
+            kb.append([InlineKeyboardButton(text=button_text, callback_data=f"download_track:{i}")])
 
         kb.append([InlineKeyboardButton(text="« В меню", callback_data="back_to_menu")])
 

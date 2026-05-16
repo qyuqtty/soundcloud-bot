@@ -5,7 +5,9 @@ from typing import Dict, Any
 import yt_dlp
 
 
-def download_audio(url: str, output_dir: Path) -> Dict[str, Any]:
+def download_audio(url: str, output_dir) -> Dict[str, Any]:
+    # Приводим к Path независимо от того, str или Path пришёл
+    output_dir = Path(output_dir)
     output_template = str(output_dir / "%(title).100s.%(ext)s")
 
     ydl_opts = {
